@@ -1,1 +1,5 @@
-node_modules/
+node_modules
+# For Visual Studio's temp directory
+.vs/
+faq/*
+package-lock.json
