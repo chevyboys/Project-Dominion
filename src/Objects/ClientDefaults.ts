@@ -1,5 +1,5 @@
 import { DMChannel, GuildChannel, Message } from "discord.js";
-import { DominionParseFunction, IDominionClient, IErrorHandlerFunction } from "../Types/Client";
+import { DominionParseFunction, IDominionClient, IErrorHandlerFunction } from "../Types/Client.js";
 
 
 export const DefaultErrorHandler: IErrorHandlerFunction = function (error, msg) {

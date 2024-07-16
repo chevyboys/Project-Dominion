@@ -1,12 +1,12 @@
-import { IBaseComponent, IBaseInteractionComponent, IDominionModule } from "../Types/Module";
-import { IModuleManager, IModuleManagerRegisterable } from "../Types/ModuleManager";
+import { IBaseComponent, IBaseInteractionComponent, IDominionModule } from "../Types/Module.js";
+import { IModuleManager, IModuleManagerRegisterable } from "../Types/ModuleManager.js";
 import fs from "fs";
 import path from "path";
-import { IDominionClient } from "../Types/Client";
+import { IDominionClient } from "../Types/Client.js";
 import { ApplicationCommand, Collection, Events, Interaction, RESTPostAPIChatInputApplicationCommandsJSONBody, RESTPostAPIContextMenuApplicationCommandsJSONBody, Snowflake } from "discord.js";
 import { BaseInteractionComponent, DominionModule, ContextMenuCommandComponent, EventComponent, MessageCommandComponent, MessageComponentInteractionComponent, ModuleOnLoadComponent, ModuleOnUnloadComponent, ScheduleComponent, SlashCommandComponent } from "./Module";
 import * as Schedule from "node-schedule";
-import { EventHandlerCollection } from "./EventHandler";
+import { EventHandlerCollection } from "./EventHandler.js";
 
 
 

@@ -2,7 +2,7 @@
 
 import { Client, CommandInteraction, ContextMenuCommandBuilder, Events, Interaction, Message, SlashCommandBuilder, SlashCommandSubcommandsOnlyBuilder, Snowflake } from "discord.js";
 import * as Schedule from "node-schedule";
-import { EventArgument1, EventArgument2, EventArgument3 } from "./EventHandler";
+import { EventArgument1, EventArgument2, EventArgument3 } from "./EventHandler.js";
 
 export interface IDominionModuleOptions {
     readonly name?: string
@@ -120,7 +120,7 @@ export interface IContextMenuCommandComponent extends IBaseInteractionComponent 
 //--------------------------------------------------------------------------
 //event handler
 export interface IEventComponentOptions extends IBaseComponentOptions {
-    readonly trigger: Events | string
+    trigger: Events | string
     process: IEventProcessFunction | IMessageCommandProcessFunction
 }
 
@@ -141,6 +141,7 @@ export interface IEventProcessFunction {
 
 export interface IMessageComponentInteractionComponentOptions extends IEventComponentOptions {
     customId: string | customIdFunction;
+    trigger: Events.InteractionCreate;
     permissions: IInteractionPermissionsFunction;
     process: IInteractionProcessFunction
 }

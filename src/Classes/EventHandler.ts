@@ -1,7 +1,7 @@
 import { Collection, Events } from "discord.js";
-import { IEventHandlerCollection } from "../Types/EventHandler";
-import { IEventComponent } from "../Types/Module";
-import { DominionClient } from "./DominionClient";
+import { IEventHandlerCollection } from "../Types/EventHandler.js";
+import { IEventComponent } from "../Types/Module.js";
+import { DominionClient } from "./DominionClient.js";
 
 function removeFromArray(Array: Array<unknown>, item: unknown) {
     const index = Array.indexOf(item);

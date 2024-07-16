@@ -1,4 +1,4 @@
-import { IDominionConfig, IDominionConfigOptions, IWebhookConfig } from "../Types/Config";
+import { IDominionConfig, IDominionConfigOptions, IWebhookConfig } from "../Types/Config.js";
 import { Snowflake } from "discord.js";
 
 

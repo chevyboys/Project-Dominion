@@ -79,7 +79,7 @@ export interface IContextMenuCommandComponent extends IBaseInteractionComponent 
     readonly description: string;
 }
 export interface IEventComponentOptions extends IBaseComponentOptions {
-    readonly trigger: Events | string;
+    trigger: Events | string;
     process: IEventProcessFunction | IMessageCommandProcessFunction;
 }
 export interface IEventComponent extends IBaseComponent {
@@ -91,6 +91,7 @@ export interface IEventProcessFunction {
 }
 export interface IMessageComponentInteractionComponentOptions extends IEventComponentOptions {
     customId: string | customIdFunction;
+    trigger: Events.InteractionCreate;
     permissions: IInteractionPermissionsFunction;
     process: IInteractionProcessFunction;
 }

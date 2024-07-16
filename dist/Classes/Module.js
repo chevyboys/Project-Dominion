@@ -191,6 +191,7 @@ export class MessageComponentInteractionComponent extends EventComponent {
     permissions;
     trigger = Events.InteractionCreate;
     constructor(MessageComponentInteractionComponentOptions) {
+        MessageComponentInteractionComponentOptions.trigger = Events.InteractionCreate;
         super(MessageComponentInteractionComponentOptions);
         this.permissions = MessageComponentInteractionComponentOptions.permissions || (() => true);
         this.trigger = Events.InteractionCreate;
@@ -264,6 +265,7 @@ export class MessageCommandComponent extends EventComponent {
     enabled = true;
     exec;
     constructor(MessageCommandOptions) {
+        MessageCommandOptions.trigger = Events.MessageCreate;
         super(MessageCommandOptions);
         this.bypassSmite = MessageCommandOptions.bypassSmite || false;
         this.enabled = MessageCommandOptions.enabled || true;

@@ -1,11 +1,11 @@
 import { SlashCommandBuilder, ContextMenuCommandBuilder, Interaction, Events, Message, ChatInputCommandInteraction, MessageContextMenuCommandInteraction, UserContextMenuCommandInteraction, AutocompleteInteraction, Snowflake } from "discord.js";
 import { customIdFunction, IBaseComponent, IBaseComponentOptions, IBaseExecFunction, IBaseInteractionComponent, IBaseInteractionComponentOption, IBaseProcessFunction, IDominionModule, IDominionModuleOptions, IScheduleComponent, IContextMenuCommandComponent, IContextMenuCommandComponentOptions, IEventComponent, IEventComponentOptions, IEventProcessFunction, IInteractionPermissionsFunction, IInteractionProcessFunction, IMessageCommandComponent, IMessageCommandComponentOptions, IMessageCommandPermissionsFunction, IMessageCommandProcessFunction, IMessageComponentInteractionComponent, IMessageComponentInteractionComponentOptions, IModuleOnLoadComponent, ISlashCommandComponent, ISlashCommandComponentOptions, IScheduleComponentOptions, ISlashCommandInteractionProcessFunction } from "../Types/Module";
-import { DominionClient } from "./DominionClient";
+import { DominionClient } from "./DominionClient.js";
 import path from "path"
 import * as Schedule from 'node-schedule';
 
 import { fileURLToPath } from "url";
-import { EventArgument1, EventArgument2, EventArgument3 } from "../Types/EventHandler";
+import { EventArgument1, EventArgument2, EventArgument3 } from "../Types/EventHandler.js";
 
 function smiteLog(triggeringUserId: Snowflake, ModuleName: string, ComponentType: string, ComponentName: string) {
     const string = `${ModuleName} ${ComponentType} ${ComponentName} did not run because ${triggeringUserId} was hit by a divine smite`;
@@ -218,6 +218,7 @@ export class MessageComponentInteractionComponent extends EventComponent impleme
     permissions: IInteractionPermissionsFunction;
     trigger = Events.InteractionCreate;
     constructor(MessageComponentInteractionComponentOptions: IMessageComponentInteractionComponentOptions) {
+        MessageComponentInteractionComponentOptions.trigger = Events.InteractionCreate;
         super(MessageComponentInteractionComponentOptions)
         this.permissions = MessageComponentInteractionComponentOptions.permissions || (() => true);
         this.trigger = Events.InteractionCreate;
@@ -300,6 +301,7 @@ export class MessageCommandComponent extends EventComponent implements IMessageC
     enabled = true;
     exec: IBaseExecFunction;
     constructor(MessageCommandOptions: IMessageCommandComponentOptions) {
+        MessageCommandOptions.trigger = Events.MessageCreate;
         super(MessageCommandOptions)
         this.bypassSmite = MessageCommandOptions.bypassSmite || false;
         this.enabled = MessageCommandOptions.enabled || true;

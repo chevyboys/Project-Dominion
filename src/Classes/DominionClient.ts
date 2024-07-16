@@ -1,11 +1,11 @@
 import { HexColorString, Client } from "discord.js";
-import { DominionParseFunction, IDominionClient, IDominionClientOptions, IErrorHandlerFunction } from "../Types/Client";
-import { IDominionConfig } from "../Types/Config";
-import { IModuleManager } from "../Types/ModuleManager";
-import { ModuleManager } from "./ModuleManager";
-import { DefaultErrorHandler, DefaultParseMessage } from "../Objects/ClientDefaults";
+import { DominionParseFunction, IDominionClient, IDominionClientOptions, IErrorHandlerFunction } from "../Types/Client.js";
+import { IDominionConfig } from "../Types/Config.js";
+import { IModuleManager } from "../Types/ModuleManager.js";
+import { ModuleManager } from "./ModuleManager.js";
+import { DefaultErrorHandler, DefaultParseMessage } from "../Objects/ClientDefaults.js";
 
-import * as schedule from "node-schedule"
+import * as schedule from "node-schedule";
 
 
 async function gracefulShutdown(client: IDominionClient) {
