@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile",
+            "command": "tsc", // Could be any other shell command
+            "args": ["--skipLibCheck"],
+            "type": "shell"
+        },
+        {
+            "label": "stage",
+            "command": "git", // Could be any other shell command
+            "args": [
+                "stage",
+                "--all",
+            ],
+            "type": "shell"
+        },
+        {
+            "label": "commit",
+            "command": "git", // Could be any other shell command
+            "args": [
+                "commit",
+                "--all",
+                "-m",
+                "devSync"
+            ],
+            "type": "shell"
+        },
+        {
+            "label": "push",
+            "command": "git", // Could be any other shell command
+            "args": [
+                "push",
+            ],
+            "type": "shell"
+        },
+        {
+            "label": "Build",
+            "dependsOn": [
+                "compile",
+                "stage",
+                "commit",
+                "push"
+            ],
+            "dependsOrder": "sequence"
+        }
+    ]
+}
