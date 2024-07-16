@@ -90,6 +90,7 @@ export interface IInteractionProcessFunction extends IEventProcessFunction {
 // Slash command Component
 export interface ISlashCommandComponentOptions extends IBaseInteractionComponentOption {
     readonly builder: SlashCommandBuilder  //Contains our name and description
+    readonly process: ISlashCommandInteractionProcessFunction;
 
 }
 

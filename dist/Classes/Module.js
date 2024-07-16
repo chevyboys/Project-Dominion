@@ -133,10 +133,12 @@ export class BaseInteractionComponent extends BaseComponent {
 // Slash command Component
 export class SlashCommandComponent extends BaseInteractionComponent {
     builder; //Contains our name and description, and is the builder for our interaction;
+    process;
     constructor(SlashCommandComponentOptions) {
         super(SlashCommandComponentOptions);
         this.description = SlashCommandComponentOptions.description || SlashCommandComponentOptions.builder.description || "";
         this.builder = SlashCommandComponentOptions.builder;
+        this.process = SlashCommandComponentOptions.process;
     }
 }
 //--------------------------------------------------------------------------

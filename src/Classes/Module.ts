@@ -1,5 +1,5 @@
 import { SlashCommandBuilder, ContextMenuCommandBuilder, Interaction, Events, Message, ChatInputCommandInteraction, MessageContextMenuCommandInteraction, UserContextMenuCommandInteraction, AutocompleteInteraction, Snowflake } from "discord.js";
-import { customIdFunction, IBaseComponent, IBaseComponentOptions, IBaseExecFunction, IBaseInteractionComponent, IBaseInteractionComponentOption, IBaseProcessFunction, IDominionModule, IDominionModuleOptions, IScheduleComponent, IContextMenuCommandComponent, IContextMenuCommandComponentOptions, IEventComponent, IEventComponentOptions, IEventProcessFunction, IInteractionPermissionsFunction, IInteractionProcessFunction, IMessageCommandComponent, IMessageCommandComponentOptions, IMessageCommandPermissionsFunction, IMessageCommandProcessFunction, IMessageComponentInteractionComponent, IMessageComponentInteractionComponentOptions, IModuleOnLoadComponent, ISlashCommandComponent, ISlashCommandComponentOptions, IScheduleComponentOptions } from "../Types/Module";
+import { customIdFunction, IBaseComponent, IBaseComponentOptions, IBaseExecFunction, IBaseInteractionComponent, IBaseInteractionComponentOption, IBaseProcessFunction, IDominionModule, IDominionModuleOptions, IScheduleComponent, IContextMenuCommandComponent, IContextMenuCommandComponentOptions, IEventComponent, IEventComponentOptions, IEventProcessFunction, IInteractionPermissionsFunction, IInteractionProcessFunction, IMessageCommandComponent, IMessageCommandComponentOptions, IMessageCommandPermissionsFunction, IMessageCommandProcessFunction, IMessageComponentInteractionComponent, IMessageComponentInteractionComponentOptions, IModuleOnLoadComponent, ISlashCommandComponent, ISlashCommandComponentOptions, IScheduleComponentOptions, ISlashCommandInteractionProcessFunction } from "../Types/Module";
 import { DominionClient } from "./DominionClient";
 import path from "path"
 import * as Schedule from 'node-schedule';
@@ -147,11 +147,12 @@ export class BaseInteractionComponent extends BaseComponent implements IBaseInte
 // Slash command Component
 export class SlashCommandComponent extends BaseInteractionComponent implements ISlashCommandComponent {
     readonly builder: SlashCommandBuilder  //Contains our name and description, and is the builder for our interaction;
-
+    readonly process: ISlashCommandInteractionProcessFunction;
     constructor(SlashCommandComponentOptions: ISlashCommandComponentOptions) {
         super(SlashCommandComponentOptions)
         this.description = SlashCommandComponentOptions.description || SlashCommandComponentOptions.builder.description || "";
         this.builder = SlashCommandComponentOptions.builder;
+        this.process = SlashCommandComponentOptions.process;
     }
 }
 

@@ -1,5 +1,5 @@
 import { SlashCommandBuilder, ContextMenuCommandBuilder, Events, Snowflake } from "discord.js";
-import { customIdFunction, IBaseComponent, IBaseComponentOptions, IBaseExecFunction, IBaseInteractionComponent, IBaseInteractionComponentOption, IBaseProcessFunction, IDominionModule, IDominionModuleOptions, IScheduleComponent, IContextMenuCommandComponent, IContextMenuCommandComponentOptions, IEventComponent, IEventComponentOptions, IEventProcessFunction, IInteractionPermissionsFunction, IInteractionProcessFunction, IMessageCommandComponent, IMessageCommandComponentOptions, IMessageCommandPermissionsFunction, IMessageCommandProcessFunction, IMessageComponentInteractionComponent, IMessageComponentInteractionComponentOptions, IModuleOnLoadComponent, ISlashCommandComponent, ISlashCommandComponentOptions, IScheduleComponentOptions } from "../Types/Module";
+import { customIdFunction, IBaseComponent, IBaseComponentOptions, IBaseExecFunction, IBaseInteractionComponent, IBaseInteractionComponentOption, IBaseProcessFunction, IDominionModule, IDominionModuleOptions, IScheduleComponent, IContextMenuCommandComponent, IContextMenuCommandComponentOptions, IEventComponent, IEventComponentOptions, IEventProcessFunction, IInteractionPermissionsFunction, IInteractionProcessFunction, IMessageCommandComponent, IMessageCommandComponentOptions, IMessageCommandPermissionsFunction, IMessageCommandProcessFunction, IMessageComponentInteractionComponent, IMessageComponentInteractionComponentOptions, IModuleOnLoadComponent, ISlashCommandComponent, ISlashCommandComponentOptions, IScheduleComponentOptions, ISlashCommandInteractionProcessFunction } from "../Types/Module";
 import { DominionClient } from "./DominionClient";
 import * as Schedule from 'node-schedule';
 /**
@@ -63,6 +63,7 @@ export declare class BaseInteractionComponent extends BaseComponent implements I
 }
 export declare class SlashCommandComponent extends BaseInteractionComponent implements ISlashCommandComponent {
     readonly builder: SlashCommandBuilder;
+    readonly process: ISlashCommandInteractionProcessFunction;
     constructor(SlashCommandComponentOptions: ISlashCommandComponentOptions);
 }
 export declare class ContextMenuCommandComponent extends BaseInteractionComponent implements IContextMenuCommandComponent {
