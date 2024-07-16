@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ContextMenuCommandBuilder, Events, Snowflake } from "discord.js";
 import { customIdFunction, IBaseComponent, IBaseComponentOptions, IBaseExecFunction, IBaseInteractionComponent, IBaseInteractionComponentOption, IBaseProcessFunction, IDominionModule, IDominionModuleOptions, IScheduleComponent, IContextMenuCommandComponent, IContextMenuCommandComponentOptions, IEventComponent, IEventComponentOptions, IEventProcessFunction, IInteractionPermissionsFunction, IInteractionProcessFunction, IMessageCommandComponent, IMessageCommandComponentOptions, IMessageCommandPermissionsFunction, IMessageCommandProcessFunction, IMessageComponentInteractionComponent, IMessageComponentInteractionComponentOptions, IModuleOnLoadComponent, ISlashCommandComponent, ISlashCommandComponentOptions, IScheduleComponentOptions, ISlashCommandInteractionProcessFunction } from "../Types/Module";
-import { DominionClient } from "./DominionClient";
+import { DominionClient } from "./DominionClient.js";
 import * as Schedule from 'node-schedule';
 /**
  * @classdesc The base class for all modules`

@@ -1,9 +1,9 @@
-import { IDominionModule } from "../Types/Module";
-import { IModuleManager, IModuleManagerRegisterable } from "../Types/ModuleManager";
-import { IDominionClient } from "../Types/Client";
+import { IDominionModule } from "../Types/Module.js";
+import { IModuleManager, IModuleManagerRegisterable } from "../Types/ModuleManager.js";
+import { IDominionClient } from "../Types/Client.js";
 import { Collection } from "discord.js";
-import { BaseInteractionComponent, MessageCommandComponent, ScheduleComponent } from "./Module";
-import { EventHandlerCollection } from "./EventHandler";
+import { BaseInteractionComponent, MessageCommandComponent, ScheduleComponent } from "./Module.js";
+import { EventHandlerCollection } from "./EventHandler.js";
 export declare class ModuleManager extends Collection<string, IDominionModule> implements IModuleManager {
     client: IDominionClient;
     applicationCommands: Collection<string, BaseInteractionComponent>;

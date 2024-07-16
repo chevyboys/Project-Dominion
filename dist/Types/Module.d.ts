@@ -1,6 +1,6 @@
 import { Client, CommandInteraction, ContextMenuCommandBuilder, Events, Interaction, Message, SlashCommandBuilder, Snowflake } from "discord.js";
 import * as Schedule from "node-schedule";
-import { EventArgument1, EventArgument2, EventArgument3 } from "./EventHandler";
+import { EventArgument1, EventArgument2, EventArgument3 } from "./EventHandler.js";
 export interface IDominionModuleOptions {
     readonly name?: string;
     readonly file?: string;

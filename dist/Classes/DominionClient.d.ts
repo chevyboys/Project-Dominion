@@ -1,7 +1,7 @@
 import { HexColorString, Client } from "discord.js";
-import { DominionParseFunction, IDominionClient, IDominionClientOptions, IErrorHandlerFunction } from "../Types/Client";
-import { IDominionConfig } from "../Types/Config";
-import { IModuleManager } from "../Types/ModuleManager";
+import { DominionParseFunction, IDominionClient, IDominionClientOptions, IErrorHandlerFunction } from "../Types/Client.js";
+import { IDominionConfig } from "../Types/Config.js";
+import { IModuleManager } from "../Types/ModuleManager.js";
 export declare class DominionClient extends Client implements IDominionClient {
     /**
      * The config object for the client

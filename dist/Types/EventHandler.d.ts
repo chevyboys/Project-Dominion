@@ -1,6 +1,6 @@
 import { ApplicationCommandPermissionsUpdateData, Entitlement, AutoModerationActionExecution, AutoModerationRule, BaseInteraction, Client, CloseEvent, Collection, DMChannel, Events, ForumChannel, Guild, GuildAuditLogsEntry, GuildBan, GuildChannel, GuildEmoji, GuildMember, GuildScheduledEvent, GuildTextBasedChannel, Invite, Message, MessageReaction, NewsChannel, Presence, Role, Snowflake, StageChannel, StageInstance, Sticker, TextChannel, ThreadChannel, ThreadMember, Typing, User, VoiceChannel, VoiceState } from "discord.js";
-import { IDominionClient } from "./Client";
-import { IEventComponent } from "./Module";
+import { IDominionClient } from "./Client.js";
+import { IEventComponent } from "./Module.js";
 export interface IEventHandlerCollection extends Collection<Events, Array<[string, IEventComponent]>> {
     add: IEventAddFunc;
     remove: IEventRemoveFunc;

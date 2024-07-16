@@ -1,7 +1,7 @@
 import { Interaction, Message } from "discord.js";
 import { HexColorString, Client, ClientOptions } from "discord.js";
-import { IModuleManager } from "./ModuleManager";
-import { IDominionConfig } from "./Config";
+import { IModuleManager } from "./ModuleManager.js";
+import { IDominionConfig } from "./Config.js";
 export interface IDominionClientOptions extends ClientOptions {
     config: IDominionConfig;
     color: HexColorString;

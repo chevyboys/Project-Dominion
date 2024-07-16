@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 import { Collection, Events } from "discord.js";
-import { BaseInteractionComponent, DominionModule, ContextMenuCommandComponent, EventComponent, MessageCommandComponent, MessageComponentInteractionComponent, ModuleOnLoadComponent, ModuleOnUnloadComponent, ScheduleComponent, SlashCommandComponent } from "./Module";
+import { BaseInteractionComponent, DominionModule, ContextMenuCommandComponent, EventComponent, MessageCommandComponent, MessageComponentInteractionComponent, ModuleOnLoadComponent, ModuleOnUnloadComponent, ScheduleComponent, SlashCommandComponent } from "./Module.js";
 import * as Schedule from "node-schedule";
-import { EventHandlerCollection } from "./EventHandler";
+import { EventHandlerCollection } from "./EventHandler.js";
 function readdirSyncRecursive(Directory) {
     const Files = [];
     const commandPath = path.resolve(process.cwd(), Directory);

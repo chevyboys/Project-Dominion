@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 import { IDominionClient } from "../Types/Client.js";
 import { ApplicationCommand, Collection, Events, Interaction, RESTPostAPIChatInputApplicationCommandsJSONBody, RESTPostAPIContextMenuApplicationCommandsJSONBody, Snowflake } from "discord.js";
-import { BaseInteractionComponent, DominionModule, ContextMenuCommandComponent, EventComponent, MessageCommandComponent, MessageComponentInteractionComponent, ModuleOnLoadComponent, ModuleOnUnloadComponent, ScheduleComponent, SlashCommandComponent } from "./Module";
+import { BaseInteractionComponent, DominionModule, ContextMenuCommandComponent, EventComponent, MessageCommandComponent, MessageComponentInteractionComponent, ModuleOnLoadComponent, ModuleOnUnloadComponent, ScheduleComponent, SlashCommandComponent } from "./Module.js";
 import * as Schedule from "node-schedule";
 import { EventHandlerCollection } from "./EventHandler.js";
 

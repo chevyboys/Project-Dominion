@@ -1,5 +1,5 @@
 import { Events, ChatInputCommandInteraction, MessageContextMenuCommandInteraction, UserContextMenuCommandInteraction, AutocompleteInteraction } from "discord.js";
-import { DominionClient } from "./DominionClient";
+import { DominionClient } from "./DominionClient.js";
 import path from "path";
 import { fileURLToPath } from "url";
 function smiteLog(triggeringUserId, ModuleName, ComponentType, ComponentName) {

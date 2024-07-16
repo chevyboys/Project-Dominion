@@ -1,6 +1,6 @@
 import { Client } from "discord.js";
-import { ModuleManager } from "./ModuleManager";
-import { DefaultErrorHandler, DefaultParseMessage } from "../Objects/ClientDefaults";
+import { ModuleManager } from "./ModuleManager.js";
+import { DefaultErrorHandler, DefaultParseMessage } from "../Objects/ClientDefaults.js";
 import * as schedule from "node-schedule";
 async function gracefulShutdown(client) {
     await client.modules.unregister();
