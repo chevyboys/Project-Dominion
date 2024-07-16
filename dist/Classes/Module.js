@@ -17,7 +17,7 @@ function smiteLog(triggeringUserId, ModuleName, ComponentType, ComponentName) {
  * @param {DominionClient} [ModuleOptions.client] - The client of the module
  * @param {string} [ModuleOptions.file] - The file the module is located in
  * @example
- *  import { DominionModule } from "chironbot"
+ *  import { DominionModule } from "project-dominion"
  *  export default const module = new DominionModule({
  *    name: "Example Module",
  *    components: [
@@ -96,7 +96,7 @@ export class BaseInteractionComponent extends BaseComponent {
     constructor(BaseInteractionComponentOptions) {
         super(BaseInteractionComponentOptions);
         this.name = BaseInteractionComponentOptions.builder.name;
-        //description is implimented in child classes, we only impliment here as a fallback
+        //description is implemented in child classes, we only implement here as a fallback
         this.description = "";
         this.builder = BaseInteractionComponentOptions.builder;
         this.category = BaseInteractionComponentOptions.category || this.module?.file || "General";
